@@ -1,7 +1,7 @@
 
 require('./settings')
 const { default: ElgazarBotConnect, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@whiskeysockets/baileys")
-const { state, saveState } = useSingleFileAuthState(`${sessionName}.json`)
+const { state, saveState } = require('./lib/rentbot')
 const pino = require('pino')
 const { Boom } = require('@hapi/boom')
 const fs = require('fs')
